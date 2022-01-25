@@ -23,7 +23,7 @@ const SeasonInfo = (props) => {
                     </p>
         
                     <div className="mt-12">
-                    {/* <iframe src={`https://www.2embed.ru/embed/tmdb/movie?id=524434`} frameborder="0" allowfullscreen="true" width="620px" height="396px"></iframe> */}
+                    <iframe src={`https://www.2embed.ru/embed/tmdb/movie?id=524434`} frameborder="0" allowfullscreen="true" width="620px" height="396px"></iframe>
                 </div>
             </div>
         </div>
