@@ -28,7 +28,7 @@ const TvInfo = (props) => {
             </p>
   
             <div className="mt-12">
-                <SeasonCards seasonCards={seasons} tvDetail={tvDetail}/>
+                <SeasonCards key={tvDetail.id} seasonCards={seasons} tvDetail={tvDetail}/>
           </div>
       </div>
   </div>
