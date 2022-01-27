@@ -22,6 +22,7 @@ export async function getServerSideProps({ query }) {
       <div className="popular-movies bg-zinc-900">
         <Header />
         <SeasonInfo SeasonDetail={SeasonDetail} tvID={id}/>
+        <Footer />
       </div>
     )
   }

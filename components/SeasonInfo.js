@@ -4,10 +4,8 @@ const SeasonInfo = (props) => {
     const { SeasonDetail, tvID } = props
     console.log(SeasonDetail.episodes.length)
     const epArray = SeasonDetail.episodes
-    return (
-<div className="min-h-screen relative">
-  <div style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${SeasonDetail.poster_path})`}} className="absolute brightness-[.20] w-full h-full bg-cover bg-no-repeat bg-center"></div>        
-        <div className="relative season-details md:mx-24">
+    return (       
+        <div className="season-details md:mx-24">
             <div className="container mx-auto px-4 py-11 flex flex-col md:flex-row season-container">
                 <div>
                     <h2 className="text-4xl mt-4 md:mt-0 font-semibold text-gray-300">Season {SeasonDetail.season_number}</h2>
@@ -24,7 +22,7 @@ const SeasonInfo = (props) => {
             </div>
         </div>
         <div className="pt-2 pb-8">
-              <iframe src={`https://www.2embed.ru/embed/tmdb/tv?id=${tvID}&s=${SeasonDetail.season_number}&e=1`} frameBorder={`0`} allowFullScreen={true} width={`100%`} height={`700px`}></iframe>
+              <iframe className="w-full aspect-video sm: pr-4 pl-4" src={`https://www.2embed.ru/embed/tmdb/tv?id=${tvID}&s=${SeasonDetail.season_number}&e=1`} frameBorder={`0`} allowFullScreen={true}></iframe>
           </div>
           <div className="flex justify-center flex-wrap">
               {epArray.map((element, index) => {
@@ -36,7 +34,6 @@ const SeasonInfo = (props) => {
                 </li>
                   )
               })}
-        </div>
         </div>
         </div>
      );
