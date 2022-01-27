@@ -26,12 +26,12 @@ const SeasonInfo = (props) => {
         <div className="pt-2 pb-8">
               <iframe src={`https://www.2embed.ru/embed/tmdb/tv?id=${tvID}&s=${SeasonDetail.season_number}&e=1`} frameBorder={`0`} allowFullScreen={true} width={`100%`} height={`700px`}></iframe>
           </div>
-          <div class="flex justify-center flex-wrap">
+          <div className="flex justify-center flex-wrap">
               {epArray.map((element, index) => {
                   return (
-                    <li key={index} class="flex-row list-none my-8 pr-2">
+                    <li key={index} className="flex-row list-none my-8 pr-2">
                     <Link key={index} href="/tv/[tvid]/season/[seasondid]-[epid]" as={`/tv/${tvID}/season/${SeasonDetail.season_number}-${index+1}`}>
-                    <a class="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{index+1}</a>
+                    <a className="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{index+1}</a>
                     </Link>
                 </li>
                   )
