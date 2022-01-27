@@ -5,11 +5,8 @@ const TvInfo = (props) => {
     const { tvDetail, genreArr } = props
     let seasons = tvDetail.seasons
     return ( 
-<div className="movie-details mx-24">
+<div className="tv-details md:pr-24">
     <div className="container mx-auto px-4 py-11 flex flex-col md:flex-row movie-container">
-        <div className="flex-none">
-            <img src={`https://image.tmdb.org/t/p/w500${tvDetail.poster_path}`} alt="poster" className="w-64 lg:w-96"></img>
-        </div>
         <div className="md:ml-24">
             <h2 className="text-4xl mt-4 md:mt-0 font-semibold text-gray-300">{tvDetail.name}</h2>
             <div className="flex flex-wrap items-center text-gray-300 text-sm my-4">

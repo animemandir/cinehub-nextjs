@@ -9,11 +9,8 @@ const Header = () => {
     </Link>
     </li>
     <li className="list-none my-8">
-        <a href="https://github.com/parnexcodes/tmdb-movie-website-svelte" className="rounded-md px-4 py-2 mr-4  text-gray-300 hover:opacity-70">GitHub</a>
-    </li>
-    <li className="list-none my-8">
-    <Link href="/api" as={`/api`}>
-        <a className="rounded-md px-4 py-2 mr-4  text-gray-300 hover:opacity-70">API</a>
+    <Link href="/tv" as={`/tv`}>
+        <a className="rounded-md px-4 py-2 mr-4  text-gray-300 hover:opacity-70">TV</a>
     </Link>
     </li>
     <li className="list-none my-8">

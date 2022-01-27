@@ -24,7 +24,7 @@ const MovieInfo = (props) => {
             </p>
   
             <div className="mt-12">
-              <iframe src={`https://www.2embed.ru/embed/tmdb/movie?id=${MovieDetail.id}`} frameBorder={`0`} allowFullScreen={`true`} width={`620px`} height={`346px`}></iframe>
+              <iframe src={`https://www.2embed.ru/embed/tmdb/movie?id=${MovieDetail.id}`} frameBorder={`0`} allowFullScreen={`true`} width={`100%`} height={`350px`}></iframe>
           </div>
       </div>
   </div>
