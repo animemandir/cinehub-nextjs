@@ -12,16 +12,16 @@ export async function getServerSideProps({ query }) {
     const data = await res.json()
     if (res.ok) {
         return {
-            props: { SeasonDetail: data }
+            props: { SeasonDetail: data, id }
         }
     }
   }
   
-  export default function SeasonDetail({ SeasonDetail}) {
+  export default function SeasonDetail({ SeasonDetail, id}) {
     return (
       <div className="popular-movies bg-zinc-900">
         <Header />
-        <SeasonInfo SeasonDetail={SeasonDetail}/>
+        <SeasonInfo SeasonDetail={SeasonDetail} tvID={id}/>
         <Footer />
       </div>
     )
