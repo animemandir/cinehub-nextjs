@@ -1,9 +1,9 @@
 const MovieInfo = (props) => {
     const { MovieDetail, genreArr } = props
     return ( 
-<div className="movie-details mx-24">
+<div className="movie-details md:mx-24">
     <div className="container mx-auto px-4 py-11 flex flex-col md:flex-row movie-container">
-        <div className="flex-none">
+        <div className="flex-none sm: flex justify-center">
             <img src={`https://image.tmdb.org/t/p/w500${MovieDetail.poster_path}`} alt="poster" className="w-64 lg:w-96"></img>
         </div>
         <div className="md:ml-24">
