@@ -5,7 +5,9 @@ const TvInfo = (props) => {
     const { tvDetail, genreArr } = props
     let seasons = tvDetail.seasons
     return ( 
-<div className="tv-details md:pr-24">
+<div className="relative min-h-screen">
+  <div style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${tvDetail.backdrop_path})`}} className="absolute brightness-[.20] w-full h-full bg-cover bg-no-repeat bg-center"></div>
+<div className="relative tv-details md:pr-24">
     <div className="container mx-auto px-4 py-11 flex flex-col md:flex-row movie-container">
         <div className="md:ml-24">
             <h2 className="text-4xl mt-4 md:mt-0 font-semibold text-gray-300">{tvDetail.name}</h2>
@@ -29,6 +31,7 @@ const TvInfo = (props) => {
           </div>
       </div>
   </div>
+</div>
 </div>
      );
 }

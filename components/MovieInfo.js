@@ -1,7 +1,9 @@
 const MovieInfo = (props) => {
     const { MovieDetail, genreArr } = props
     return ( 
-<div className="movie-details md:mx-24">
+<div className="min-h-screen relative">
+  <div style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${MovieDetail.backdrop_path})`}} className="absolute brightness-[.20] w-full h-full bg-cover bg-no-repeat bg-center"></div>
+<div className="relative movie-details md:mx-24">
     <div className="container mx-auto px-4 py-11 flex flex-col md:flex-row movie-container">
         <div>
             <h2 className="text-4xl mt-4 md:mt-0 font-semibold text-gray-300">{MovieDetail.title}</h2>
@@ -24,6 +26,7 @@ const MovieInfo = (props) => {
   <div className="pt-2 pb-8">
               <iframe src={`https://www.2embed.ru/embed/tmdb/movie?id=${MovieDetail.id}`} frameBorder={`0`} allowFullScreen={true} width={`100%`} height={`700px`}></iframe>
           </div>
+</div>
 </div>
      );
 }

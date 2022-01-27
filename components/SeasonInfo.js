@@ -4,8 +4,10 @@ const SeasonInfo = (props) => {
     const { SeasonDetail, tvID } = props
     console.log(SeasonDetail.episodes.length)
     const epArray = SeasonDetail.episodes
-    return ( 
-        <div className="season-details md:mx-24">
+    return (
+<div className="min-h-screen relative">
+  <div style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1280${SeasonDetail.poster_path})`}} className="absolute brightness-[.20] w-full h-full bg-cover bg-no-repeat bg-center"></div>        
+        <div className="relative season-details md:mx-24">
             <div className="container mx-auto px-4 py-11 flex flex-col md:flex-row season-container">
                 <div>
                     <h2 className="text-4xl mt-4 md:mt-0 font-semibold text-gray-300">Season {SeasonDetail.season_number}</h2>
@@ -34,6 +36,7 @@ const SeasonInfo = (props) => {
                 </li>
                   )
               })}
+        </div>
         </div>
         </div>
      );

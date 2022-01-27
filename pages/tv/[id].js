@@ -26,7 +26,6 @@ export async function getServerSideProps({ query }) {
       <div className="popular-movies bg-zinc-900">
         <Header />
         <TvInfo tvDetail={tvDetail} genreArr={genreArr}/>
-        <Footer />
       </div>
     )
   }
