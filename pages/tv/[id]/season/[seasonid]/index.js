@@ -1,6 +1,6 @@
-import Header from '../../../../components/Header'
-import Footer from '../../../../components/Footer'
-import SeasonInfo from '../../../../components/SeasonInfo'
+import Header from '../../../../../components/Header'
+import Footer from '../../../../../components/Footer'
+import SeasonInfo from '../../../../../components/SeasonInfo'
 
 export async function getServerSideProps({ query }) {
     // Fetch data from external API
