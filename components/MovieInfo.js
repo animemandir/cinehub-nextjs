@@ -1,7 +1,7 @@
 const MovieInfo = (props) => {
     const { MovieDetail, genreArr } = props
     return ( 
-<div className="movie-details md:mx-24">
+<div className="min-h-screen movie-details md:mx-24">
     <div className="container mx-auto px-4 py-11 flex flex-col md:flex-row movie-container">
         <div>
             <h2 className="text-4xl mt-4 md:mt-0 font-semibold text-gray-300">{MovieDetail.title}</h2>

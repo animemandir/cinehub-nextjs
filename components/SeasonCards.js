@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const SeasonCards = (props) => {
     const { seasonCards, tvDetail } = props
-    console.log(tvDetail)
     return (
         <div className="season-cards flex flex-row flex-wrap justify-start">
         {seasonCards.map((season, index) => {
@@ -13,6 +12,7 @@ const SeasonCards = (props) => {
                         <Link key={index} href="/tv/[id]/season/[seasonid]" as={`/tv/${tvDetail.id}/season/${index+1}`}>
                         <a title={season.name}>
                         <img className="w-full hover:opacity-70" title={season.name} src={`https://image.tmdb.org/t/p/w500${season.poster_path}`} alt={season.name} width="1500px" height="2250px"/>
+                        <div className="flex text-gray-300 justify-center text-xl leading-0 font-semibold py-2">Season {index+1}</div>
                         </a>
                         </Link>
                     </div>
@@ -26,6 +26,7 @@ const SeasonCards = (props) => {
                         <Link key={index} href="/tv/[id]/season/[seasonid]" as={`/tv/${tvDetail.id}/season/${index}`}>
                         <a title={season.name}>
                         <img className="w-full hover:opacity-70" title={season.name} src={`https://image.tmdb.org/t/p/w500${season.poster_path}`} alt={season.name} width="1500px" height="2250px"/>
+                        <div className="flex text-gray-300 justify-center text-xl leading-0 font-semibold py-2">Season {index}</div>
                         </a>
                         </Link>
                     </div>
