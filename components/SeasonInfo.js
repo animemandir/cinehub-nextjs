@@ -21,10 +21,10 @@ const SeasonInfo = (props) => {
           <div className="flex flex-wrap flex-row justify-center h-full">
           {epArray.map((element, index) => {
               return (
-                  <div className="px-2 py-2 overflow-hidden">
-                  <a href={`/tv/${tvID}/season/${SeasonDetail.season_number}/${index+1}`}>
-                  <img className="w-72 rounded-lg hover:opacity-70" src={`https://image.tmdb.org/t/p/w500${element.still_path}`} alt={element.name} />
-                  <p className="max-w-[17rem] truncate text-gray-300 justify-center text-sm leading-0 font-semibold py-2">{SeasonDetail.season_number} x {index+1} : {element.name}</p>
+                  <div key={index} className="px-2 py-2 overflow-hidden">
+                  <a key={index} href={`/tv/${tvID}/season/${SeasonDetail.season_number}/${index+1}`}>
+                  <img key={index} className="w-72 rounded-lg hover:opacity-70" src={`https://image.tmdb.org/t/p/w500${element.still_path}`} alt={element.name} />
+                  <p key={index} className="max-w-[17rem] truncate text-gray-300 justify-center text-sm leading-0 font-semibold py-2">{SeasonDetail.season_number} x {index+1} : {element.name}</p>
                   </a>
                   </div>
               )
