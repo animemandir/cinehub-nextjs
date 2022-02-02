@@ -16,8 +16,7 @@ export async function getServerSideProps() {
   }
 }
 
-export default function Home({ popularMovies }) {
-
+export default function Home({ popularMovies }) {  
   return (
     <div className="popular-movies bg-zinc-900">
       <Header />

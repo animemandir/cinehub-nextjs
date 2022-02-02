@@ -12,17 +12,17 @@ export async function getServerSideProps({ query }) {
   const data = await res.json()
   if (res.ok) {
       return {
-          props: { PopularPage: data.results }
+          props: { PopularPage: data.results, pageid }
       }
   }
 }
 
-export default function PopularPage({ PopularPage }) {
+export default function PopularPage({ PopularPage, pageid }) {
 
   return (
     <div className="popular-movies bg-zinc-900">
       <Header />
-      <MovieDisplay movie={PopularPage}/>
+      <MovieDisplay movie={PopularPage} pageid={pageid}/>
       <Footer />
     </div>
   )

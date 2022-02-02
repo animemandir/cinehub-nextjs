@@ -12,17 +12,17 @@ export async function getServerSideProps({ query }) {
   const data = await res.json()
   if (res.ok) {
       return {
-          props: { PopulartvPage: data.results }
+          props: { PopulartvPage: data.results, pageid }
       }
   }
 }
 
-export default function PopulartvPage({ PopulartvPage }) {
+export default function PopulartvPage({ PopulartvPage, pageid }) {
 
   return (
     <div className="popular-tv bg-zinc-900">
       <Header />
-      <TvDisplay tv={PopulartvPage}/>
+      <TvDisplay tv={PopulartvPage} pageid={pageid}/>
       <Footer />
     </div>
   )
