@@ -14,24 +14,24 @@ const TvDisplay = (props) => {
                     return (<TvCards key={TvCard.id} TvCard={TvCard}/>)
                 })}
             </div>
-            <div class="flex justify-center flex-wrap">
-            <li class="flex-row list-none my-8 pr-2">
+            <div className="flex justify-center flex-wrap">
+            <li className="flex-row list-none my-8 pr-2">
                     <Link href="/tv/popular/page/[pageid]" as={`/tv/popular/page/${Number(pageid)-1}`}>
-                    <a class="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{`<`}</a>
+                    <a className="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{`<`}</a>
                     </Link>
                 </li>
               {pagenum.map((element, index) => {
                   return (
-                    <li key={index} class="flex-row list-none my-8 pr-2">
+                    <li key={index} className="flex-row list-none my-8 pr-2">
                     <Link key={index} href="/tv/popular/page/[pageid]" as={`/tv/popular/page/${element}`}>
-                    <a class="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{element}</a>
+                    <a className="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{element}</a>
                     </Link>
                 </li>
                   )
               })}
-            <li class="flex-row list-none my-8 pr-2">
+            <li className="flex-row list-none my-8 pr-2">
                     <Link href="/tv/popular/page/[pageid]" as={`/tv/popular/page/${Number(pageid)+1}`}>
-                    <a class="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{`>`}</a>
+                    <a className="rounded-md px-4 py-2 bg-zinc-800 text-gray-300 hover:opacity-70">{`>`}</a>
                     </Link>
                 </li>              
         </div>            
