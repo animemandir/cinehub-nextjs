@@ -1,6 +1,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import MovieInfo from '../../components/MovieInfo'
+import Script from 'next/script'
 
 export async function getServerSideProps({ query }) {
     // Fetch data from external API
@@ -24,6 +25,7 @@ export async function getServerSideProps({ query }) {
   export default function MovieDetail({ MovieDetail, genreArr }) {
     return (
       <div className="popular-movies bg-zinc-900">
+        <Script src="https://arc.io/widget.min.js#d9siwAFU" />
         <Header />
         <MovieInfo MovieDetail={MovieDetail} genreArr={genreArr}/>
         <Footer />

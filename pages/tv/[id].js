@@ -1,6 +1,7 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import TvInfo from '../../components/TvInfo'
+import Script from 'next/script'
 
 export async function getServerSideProps({ query }) {
     // Fetch data from external API
@@ -24,6 +25,7 @@ export async function getServerSideProps({ query }) {
   export default function tvDetail({ tvDetail, genreArr }) {
     return (
       <div className="popular-movies bg-zinc-900">
+        <Script src="https://arc.io/widget.min.js#d9siwAFU" />
         <Header />
         <TvInfo tvDetail={tvDetail} genreArr={genreArr}/>
         <Footer />

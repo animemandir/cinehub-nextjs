@@ -1,6 +1,7 @@
 import Header from '../../../../components/Header'
 import Footer from '../../../../components/Footer'
 import TvDisplay from '../../../../components/TvDisplay'
+import Script from 'next/script'
 
 export async function getServerSideProps({ query }) {
     const { pageid } = query
@@ -21,6 +22,7 @@ export default function PopulartvPage({ PopulartvPage, pageid }) {
 
   return (
     <div className="popular-tv bg-zinc-900">
+      <Script src="https://arc.io/widget.min.js#d9siwAFU" />
       <Header />
       <TvDisplay tv={PopulartvPage} pageid={pageid}/>
       <Footer />

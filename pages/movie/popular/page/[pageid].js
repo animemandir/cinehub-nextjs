@@ -1,6 +1,7 @@
 import Footer from '../../../../components/Footer'
 import Header from '../../../../components/Header'
 import MovieDisplay from '../../../../components/MovieDisplay'
+import Script from 'next/script'
 
 export async function getServerSideProps({ query }) {
   const { pageid } = query
@@ -21,6 +22,7 @@ export default function PopularPage({ PopularPage, pageid }) {
 
   return (
     <div className="popular-movies bg-zinc-900">
+      <Script src="https://arc.io/widget.min.js#d9siwAFU" />
       <Header />
       <MovieDisplay movie={PopularPage} pageid={pageid}/>
       <Footer />

@@ -1,6 +1,7 @@
 import Header from '../../../../../components/Header'
 import Footer from '../../../../../components/Footer'
 import EpisodeInfo from '../../../../../components/EpisodeInfo'
+import Script from 'next/script'
 
 export async function getServerSideProps({ query }) {
     // Fetch data from external API
@@ -22,6 +23,7 @@ export async function getServerSideProps({ query }) {
 export default function epId({ EpisodeDetail, seasonid, epid, id }) {
     return (
       <div className="ep-id bg-zinc-900">
+        <Script src="https://arc.io/widget.min.js#d9siwAFU" />
           <Header />
           <EpisodeInfo EpisodeDetail={EpisodeDetail} seasonid={seasonid} epid={epid} showid={id}/>
           <Footer />
