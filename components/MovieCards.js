@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const MovieCards = (props) => {
@@ -11,7 +12,7 @@ const MovieCards = (props) => {
         <div className="rounded-md overflow-hidden">
             <Link key={MovieCard.id} href="/movie/[id]" as={`/movie/${MovieCard.id}`}>
             <a title={MovieCard.title}>
-            <img className="w-11/12 hover:opacity-70" title={MovieCard.title} src={poster_path} alt={MovieCard.title} width="1500px" height="2250px"/>
+            <Image className="w-11/12 hover:opacity-70" title={MovieCard.title} src={poster_path} alt={MovieCard.title} width="1500px" height="2250px"/>
             </a>
             </Link>
         </div>

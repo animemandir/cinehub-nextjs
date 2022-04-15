@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next'
 import Header from '../../components/Header'
+import Image from 'next/image'
 // import {DebounceInput} from 'react-debounce-input';
 // import { useDebounce } from 'use-debounce';
 
@@ -45,7 +46,7 @@ useEffect(() => {
                             <div key={MovieCard.id + 7} className="rounded-md overflow-hidden">
                                 <Link key={MovieCard.id} href="/movie/[id]" as={`/movie/${MovieCard.id}`}>
                                 <a title={MovieCard.title} key={MovieCard.id + 1}>
-                                <img className="w-11/12 hover:opacity-70" key={MovieCard.id + 3} title={MovieCard.title} src={`https://image.tmdb.org/t/p/w500${MovieCard.poster_path}`} alt={MovieCard.title} width="1500px" height="2250px"/>
+                                <Image className="w-11/12 hover:opacity-70" key={MovieCard.id + 3} title={MovieCard.title} src={`https://image.tmdb.org/t/p/w500${MovieCard.poster_path}`} alt={MovieCard.title} width="1500px" height="2250px"/>
                                 </a>
                                 </Link>
                             </div>
