@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import Header from '../../components/Header'
 import Image from 'next/image'
+import Script from 'next/script'
 // import {DebounceInput} from 'react-debounce-input';
 // import { useDebounce } from 'use-debounce';
 
@@ -24,6 +25,7 @@ useEffect(async () => {
 }, [query])
     return (
         <div className='bg-zinc-900 min-h-screen'>
+            <Script src="https://arc.io/widget.min.js#d9siwAFU" />
             <Header/>
             <div className='flex justify-center flex-grow text-white'>
             <input
