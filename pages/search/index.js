@@ -12,12 +12,15 @@ const [data, setData] = useState([])
 
 const apiKey = '4c1c4651b470f738873f80310325d848'
 
-useEffect(async () => {
-    const res = await fetch(
-        `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&page=1&query=${searchInput}`
-    )
-    const apiData = await res.json()
-    setData(apiData.results)
+useEffect(() => {
+    const apiReq = async () => {
+        const res = await fetch(
+            `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&page=1&query=${searchInput}`
+        )
+        const apiData = await res.json()
+        setData(apiData.results)
+    }
+    apiReq()
     console.log(data)
 }, [searchInput])
 
