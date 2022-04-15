@@ -9,7 +9,7 @@ const TvDisplay = (props) => {
     }
     return (    
         <div className="popular-movies md:mx-24">
-            <div className="flex flex-wrap overflow-hidden sm:-mx-2 pl-8 md:-mx-2 lg:-mx-2 xl:-mx-2">
+            <div className="flex flex-wrap overflow-hidden sm:-mx-2 pl-2 md:-mx-2 lg:-mx-2 xl:-mx-2">
                 {tv.map(TvCard => {
                     return (<TvCards key={TvCard.id} TvCard={TvCard}/>)
                 })}

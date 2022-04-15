@@ -39,7 +39,7 @@ useEffect(async () => {
                 />
             </div>
             <div className="popular-movies md:mx-24">
-                <div className="flex flex-wrap overflow-hidden sm:-mx-2 pl-8 md:-mx-2 lg:-mx-2 xl:-mx-2">
+                <div className="flex flex-wrap py-4 pb-4 overflow-hidden sm:-mx-2 pl-16 md:-mx-2 lg:-mx-2 xl:-mx-2">
                     {data ? data.results.map(MovieCard => {
                         let poster_path = `https://image.tmdb.org/t/p/w500${MovieCard.poster_path}`
                         MovieCard.poster_path == null ? poster_path = 'https://i.imgur.com/wjVuAGb.png' : poster_path
