@@ -26,7 +26,7 @@ const SeasonInfo = (props) => {
                     <Link href="/tv/[id]/season/[seasonid]/[epid]" as={`/tv/${tvID}/season/${SeasonDetail.season_number}/${index+1}`}>
                     <a key={index+2}>
                     <img key={index+3} className="w-72 rounded-sm hover:opacity-70" src={`https://i.imgur.com/HIYYPtZ.png`} alt={element.name} />
-                    <p key={index+4} className="bg-zinc-800 max-w-[18rem] rounded-sm truncate text-gray-300 text-sm leading-0 font-semibold py-2">{SeasonDetail.season_number} x {index+1} : {element.name}</p>
+                    <p key={index+4} className="bg-zinc-800 max-w-[18rem] rounded-sm break-words text-gray-300 text-sm leading-0 font-semibold py-2">{SeasonDetail.season_number} x {index+1} : {element.name}</p>
                     </a>
                     </Link>
                     </div>
@@ -38,7 +38,7 @@ const SeasonInfo = (props) => {
                     <Link href="/tv/[id]/season/[seasonid]/[epid]" as={`/tv/${tvID}/season/${SeasonDetail.season_number}/${index+1}`}>
                     <a key={index+2}>
                     <img key={index+3} className="w-72 rounded-sm hover:opacity-70" src={`https://image.tmdb.org/t/p/w500${element.still_path}`} alt={element.name} />
-                    <p key={index+4} className="bg-zinc-800 max-w-[18rem] rounded-sm truncate text-gray-300 text-sm leading-0 font-semibold py-2">{SeasonDetail.season_number} x {index+1} : {element.name}</p>
+                    <p key={index+4} className="bg-zinc-800 max-w-[18rem] rounded-sm break-words text-gray-300 text-sm leading-0 font-semibold py-2">{SeasonDetail.season_number} x {index+1} : {element.name}</p>
                     </a>
                     </Link>
                     </div>
