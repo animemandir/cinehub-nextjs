@@ -50,13 +50,13 @@ useEffect(async () => {
                             <Link key={MovieCard.id} href="/movie/[id]" as={`/movie/${MovieCard.id}`}>
                             <a title={MovieCard.title} key={MovieCard.id + 1}>
                             <img className="w-72 rounded-sm hover:opacity-70" key={MovieCard.id + 3} title={MovieCard.title} src={poster_path} alt={MovieCard.title}/>
-                            <p key={MovieCard.id + 11} className="bg-zinc-800 max-w-[18rem] rounded-sm truncate text-gray-300 text-sm leading-0 font-semibold py-2 text-center">{MovieCard.title}</p>
+                            <p key={MovieCard.id + 11} className="bg-zinc-800 max-w-[18rem] rounded-sm truncate text-gray-300 text-sm leading-0 font-semibold py-2 text-center">{MovieCard.title} <b>(Movie)</b></p>
                             </a>
                             </Link> : 
                             <Link key={MovieCard.id} href="/tv/[id]" as={`/tv/${MovieCard.id}`}>
                             <a title={MovieCard.title} key={MovieCard.id + 1}>
                             <img className="w-72 rounded-sm hover:opacity-70" key={MovieCard.id + 3} title={MovieCard.name} src={poster_path} alt={MovieCard.name}/>
-                            <p key={MovieCard.id + 13} className="bg-zinc-800 max-w-[18rem] rounded-sm truncate text-gray-300 text-sm leading-0 font-semibold py-2 text-center">{MovieCard.name}</p>
+                            <p key={MovieCard.id + 13} className="bg-zinc-800 max-w-[18rem] rounded-sm truncate text-gray-300 text-sm leading-0 font-semibold py-2 text-center">{MovieCard.name} <b>(TV)</b></p>
                             </a>
                             </Link>    
                             }
