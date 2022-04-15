@@ -1,4 +1,7 @@
 module.exports = {
+  images: {
+    domains: ['image.tmdb.org', 'imgur.com', 'arc.io'],
+  },
   reactStrictMode: true,
   async redirects() {
     return [
