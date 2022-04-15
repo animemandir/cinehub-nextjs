@@ -6,13 +6,11 @@ import Script from 'next/script'
 export async function getServerSideProps({ query }) {
     // Fetch data from external API
     const { id, seasonid, epid } = query
-    console.log(epid)
     const apiKey = process.env.API_KEY
     const res = await fetch(
         `https://api.themoviedb.org/3/tv/${id}/season/${seasonid}/episode/${epid}?api_key=${apiKey}&language=en-US`
     )
     const data = await res.json()
-    console.log(data)
     if (res.ok) {
         return {
             props: { EpisodeDetail: data, id, seasonid, epid }
