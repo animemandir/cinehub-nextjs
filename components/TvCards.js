@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const TvCards = (props) => {
@@ -12,7 +11,7 @@ const TvCards = (props) => {
     <div className="rounded-md overflow-hidden">
         <Link key={TvCard.id} href="/tv/[id]" as={`/tv/${TvCard.id}`}>
         <a title={TvCard.title}>
-        <Image className="w-11/12 hover:opacity-70" title={TvCard.title} src={poster_path} alt={TvCard.title} width="1500px" height="2250px"/>
+        <img className="w-11/12 hover:opacity-70" title={TvCard.title} src={poster_path} alt={TvCard.title} width="1500px" height="2250px"/>
         </a>
         </Link>
     </div>

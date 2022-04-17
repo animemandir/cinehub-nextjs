@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const SeasonCards = (props) => {
@@ -12,7 +11,7 @@ const SeasonCards = (props) => {
                     <div className="rounded-md overflow-hidden">
                         <Link key={index} href="/tv/[id]/season/[seasonid]" as={`/tv/${tvDetail.id}/season/${season.season_number}`}>
                         <a title={season.name}>
-                        <Image className="w-full hover:opacity-70" title={season.name} src={`https://i.imgur.com/wjVuAGb.png`} alt={season.name} width="1500px" height="2250px"/>
+                        <img className="w-full hover:opacity-70" title={season.name} src={`https://i.imgur.com/wjVuAGb.png`} alt={season.name} width="1500px" height="2250px"/>
                         <div className="flex text-gray-300 justify-center text-xl leading-0 font-semibold py-2">{season.name}</div>
                         </a>
                         </Link>
@@ -25,7 +24,7 @@ const SeasonCards = (props) => {
                     <div className="rounded-md overflow-hidden">
                         <Link key={index} href="/tv/[id]/season/[seasonid]" as={`/tv/${tvDetail.id}/season/${season.season_number}`}>
                         <a title={season.name}>
-                        <Image className="w-full hover:opacity-70" title={season.name} src={`https://image.tmdb.org/t/p/w500${season.poster_path}`} alt={season.name} width="1500px" height="2250px"/>
+                        <img className="w-full hover:opacity-70" title={season.name} src={`https://image.tmdb.org/t/p/w500${season.poster_path}`} alt={season.name} width="1500px" height="2250px"/>
                         <div className="flex text-gray-300 justify-center text-xl leading-0 font-semibold py-2">{season.name}</div>
                         </a>
                         </Link>
