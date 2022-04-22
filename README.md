@@ -14,14 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 I'm still developing it , so it has a lot of bugs and unformatted code.
 
-Search is not implemented yet.
-
-Get TMDB ID from : https://www.themoviedb.org/
-
-Movies : ``https://cinehub-nextjs.vercel.app/movie/{id}``
-
-TV : ``https://cinehub-nextjs.vercel.app/tv/{id}``
-
 ## Images
 
 ![image 1](https://i.imgur.com/eCAlvPI.png)
