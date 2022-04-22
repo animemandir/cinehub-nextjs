@@ -2,6 +2,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import MovieDisplay from '../components/MovieDisplay'
 import Script from 'next/script'
+import Head from 'next/head'
 
 export async function getServerSideProps() {
   // Fetch data from external API
@@ -20,6 +21,9 @@ export async function getServerSideProps() {
 export default function Home({ popularMovies }) {  
   return (
     <div className="popular-movies bg-zinc-900">
+      <Head>
+        <title>Movies - Cinehub.wtf</title>
+      </Head>
       <Script src="https://arc.io/widget.min.js#d9siwAFU" />
       <Header />
       <MovieDisplay movie={popularMovies}/>

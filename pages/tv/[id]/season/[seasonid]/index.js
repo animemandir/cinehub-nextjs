@@ -2,6 +2,7 @@ import Header from '../../../../../components/Header'
 import Footer from '../../../../../components/Footer'
 import SeasonInfo from '../../../../../components/SeasonInfo'
 import Script from 'next/script'
+import Head from 'next/head'
 
 export async function getServerSideProps({ query }) {
     // Fetch data from external API
@@ -21,6 +22,9 @@ export async function getServerSideProps({ query }) {
   export default function SeasonDetail({ SeasonDetail, id}) {
     return (
       <div className="popular-movies bg-zinc-900">
+        <Head>
+          <title>Season {SeasonDetail.season_number} ({SeasonDetail.air_date.substr(0,4)}) - Cinehub.wtf</title>
+        </Head>         
         <Script src="https://arc.io/widget.min.js#d9siwAFU" />
         <Header />
         <SeasonInfo SeasonDetail={SeasonDetail} tvID={id}/>
