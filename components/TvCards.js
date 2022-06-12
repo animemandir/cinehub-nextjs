@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const TvCards = (props) => {
     const { TvCard } = props
-    let poster_path = `https://image.tmdb.org/t/p/w500${TvCard.poster_path}`
+    let poster_path = `https://image.tmdb.org/t/p/w342${TvCard.poster_path}`
     if (TvCard.poster_path == null) {
         poster_path = 'https://i.imgur.com/wjVuAGb.png'
     }
