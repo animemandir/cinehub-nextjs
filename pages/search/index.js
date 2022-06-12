@@ -43,7 +43,7 @@ useEffect(async () => {
             <div className="popular-movies md:mx-24">
                 <div className="flex flex-wrap py-4 pb-4 overflow-hidden sm:-mx-2 pl-16 md:-mx-2 lg:-mx-2 xl:-mx-2">
                     {data ? data.results.map(MovieCard => {
-                        let poster_path = `https://image.tmdb.org/t/p/w500${MovieCard.poster_path}`
+                        let poster_path = `https://image.tmdb.org/t/p/w342${MovieCard.poster_path}`
                         let first_air_date = MovieCard.first_air_date
                         let release_date = MovieCard.release_date
                         first_air_date == null || first_air_date == '' ? first_air_date = '' : first_air_date = `(${first_air_date.substr(0,4)})`
