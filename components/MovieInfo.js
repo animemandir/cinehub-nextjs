@@ -22,7 +22,7 @@ const MovieInfo = (props) => {
       </div>
   </div>
   <div className="pt-2 pb-8">
-              <iframe className="w-full aspect-video sm: pr-4 pl-4" src={`https://www.2embed.ru/embed/tmdb/movie?id=${MovieDetail.id}`} frameBorder={`0`} allowFullScreen={true}></iframe>
+              <iframe className="w-full aspect-video sm: pr-4 pl-4" src={`https://www.2embed.to/embed/tmdb/movie?id=${MovieDetail.id}`} frameBorder={`0`} allowFullScreen={true}></iframe>
           </div>
 </div>
      );
